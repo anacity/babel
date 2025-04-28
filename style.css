@@ -70,7 +70,9 @@ body {
   }
   
   .movie-poster {
-    width: 100%;
+    align-self: center;
+    width: 60%;
+    height: 280px;
     border-radius: 8px;
   }
   
