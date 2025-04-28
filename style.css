@@ -223,6 +223,7 @@ body {
   }
   
   .expand-button {
+    font-family: 'Bebas Neue', sans-serif;
     padding: 12px 18px;
     background-color: #2a2727;
     color: #fff;
