@@ -110,20 +110,17 @@ livros.forEach(livro => {
         });
 });
 
+
 function obterDadosLivros(isbns) {
   const url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbns.join(',')}&format=json&jscmd=data`;
 
   fetch(url)
       .then(response => response.json())
       .then(data => {
-          console.log(data);
-
           const capasElementos = document.querySelectorAll('.resenha-capa'); 
 
-          isbns.forEach((isbn, index) => {
-              const livro = data[`ISBN:${isbn}`];
-
-              const capa = livro && livro.cover ? livro.cover.medium : 'https://via.placeholder.com/150';
+          Object.entries(data).forEach((livro, index) => {
+              const capa = livro && livro[1].cover ? livro[1].cover.medium : 'https://via.placeholder.com/150';
 
               const capaElemento = capasElementos[index]; 
               if (capaElemento) {
