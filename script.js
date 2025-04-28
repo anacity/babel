@@ -50,19 +50,16 @@ function obterDadosLivros(isbns) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data); // Verifique a resposta da API para garantir que as URLs das capas estão corretas
+            console.log(data);
 
-            // Iterar sobre os ISBNs e adicionar as capas
             isbns.forEach((isbn, index) => {
                 const livro = data[`ISBN:${isbn}`];
                 
-                // Verificar se a capa existe e pegar a URL
                 const capa = livro && livro.cover ? livro.cover.medium : 'https://via.placeholder.com/150';
                 
-                // Seleciona o elemento de imagem correspondente usando o índice
                 const capaElemento = document.querySelectorAll('.resenha-capa')[index];
                 if (capaElemento) {
-                    capaElemento.src = capa;  // Atribui a URL da capa
+                    capaElemento.src = capa;  
                 }
             });
         })
@@ -71,5 +68,5 @@ function obterDadosLivros(isbns) {
         });
 }
 
-const isbns = ['9781250095282', '9788501071545', '9788937461187']; // 3 ISBNs
+const isbns = ['9781250095282', '9788501071545', '9788937461187'];
 obterDadosLivros(isbns);
