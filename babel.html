@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babel</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="site-title">BABEL</h1>
+    <nav class="nav-links">
+      <a href="#">FAVORITOS DE ABRIL</a>
+      <a href="#">NEWSLETTER</a>
+      <a href="#">RESENHAS</a>
+    </nav>
+  </header>
+
+  <h2 class="section-title">FAVORITOS DE ABRIL</h2>
+
+  <main class="main-content">
+
+    <section class="movies-section">
+        <div class="movies-grid">
+          <div class="movie-card">
+            <img src="./imagens/pride and prejudice (2005).jpg" alt="Orgulho e Preconceito" class="movie-poster">
+            <h3 class="movie-title">Orgulho e Preconceito</h3>
+            <p class="movie-year">Ano: 2005</p>
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+              </div>
+          </div>
+      
+          <div class="movie-card">
+            <img src="./imagens/little women (2019).jpeg" alt="Mulherzinhas" class="movie-poster">
+            <h3 class="movie-title">Mulherzinhas</h3>
+            <p class="movie-year">Ano: 2019</p>
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i> 
+              </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./imagens/nosferatu scenery.jpeg" alt="Nosferatu" class="movie-poster">
+            <h3 class="movie-title">Nosferatu</h3>
+            <p class="movie-year">Ano: 2024</p>
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+              </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./imagens/Bottoms (2023).jpeg" alt="Bottoms" class="movie-poster">
+            <h3 class="movie-title">Bottoms</h3>
+            <p class="movie-year">Ano: 2023</p>
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>  
+              </div>
+          </div>
+        
+          <div class="movie-card">
+            <img src="./imagens/the batman (2022) dir_ matt reeves_.jpeg" alt="The Batamn" class="movie-poster">
+            <h3 class="movie-title">Batman (2022)</h3>
+            <p class="movie-year">Ano: 2022</p>
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>  
+              </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="favoritos">
+      
+      <div class="favoritos-grid" id="favoritos-container">
+      </div>
+    </section>
+
+    <section class="resenhas">
+        <h2 class="section-title">RESENHAS</h2>
+        <div class="resenhas-display">
+            <!-- Exemplo de resenha 1 -->
+            <article class="resenha-card" id="resenha-1">
+                <div class="resenha-header">
+                    <img class="resenha-capa" alt="Capa do livro">
+                    <div>
+                        <h3>OBRA: "IF WE WERE VILLAINS"</h3>
+                        <p class="resenha-user">de @lilistark</p>
+                    </div>
+                </div>
+                <p class="resenha-snippet">A obra narra uma tragédia digna de Shakespeare entre estudantes de teatro...</p>
+                <button class="expand-button">Continuar</button>
+            </article>
+    
+            <!-- Exemplo de resenha 2 -->
+            <article class="resenha-card" id="resenha-2">
+                <div class="resenha-header">
+                    <img class="resenha-capa" alt="Capa do livro">
+                    <div>
+                        <h3>OBRA: "A LITTLE LIFE"</h3>
+                        <p class="resenha-user">de @lilistark</p>
+                    </div>
+                </div>
+                <p class="resenha-snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, rerum laudantium libero quas consectetur eos quidem...</p>
+                <button class="expand-button">Continuar</button>
+            </article>
+    
+            <!-- Exemplo de resenha 3 -->
+            <article class="resenha-card" id="resenha-3">
+                <div class="resenha-header">
+                    <img class="resenha-capa" alt="Capa do livro">
+                    <div>
+                        <h3>OBRA: "WUTHERING HEIGHTS"</h3>
+                        <p class="resenha-user">de @lilistark</p>
+                    </div>
+                </div>
+                <p class="resenha-snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, rerum laudantium libero quas consectetur eos quidem...</p>
+                <button class="expand-button">Continuar</button>
+            </article>
+        </div>
+    </section>    
+    
+    <section class="newsletter">
+        <p>SE CADASTRE NA NEWSLETTER PARA PARTICIPAR DE VOTAÇÃO E PUBLIQUE SUAS RESENHAS!</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Digite seu email aqui..." required>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
