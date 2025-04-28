@@ -111,29 +111,29 @@ livros.forEach(livro => {
 });
 
 function obterDadosLivros(isbns) {
-    const url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbns.join(',')}&format=json&jscmd=data`;
+  const url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbns.join(',')}&format=json&jscmd=data`;
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          console.log(data);
 
-            const capasElementos = document.querySelectorAll('.resenha-capa'); 
+          const capasElementos = document.querySelectorAll('.resenha-capa'); 
 
-            isbns.forEach((isbn, index) => {
-                const livro = data[`ISBN:${isbn}`];
+          isbns.forEach((isbn, index) => {
+              const livro = data[`ISBN:${isbn}`];
 
-                const capa = livro && livro.cover ? livro.cover.medium : 'https://via.placeholder.com/150';
+              const capa = livro && livro.cover ? livro.cover.medium : 'https://via.placeholder.com/150';
 
-                const capaElemento = capasElementos[index]; 
-                if (capaElemento) {
-                    capaElemento.src = capa;
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Erro ao buscar os livros:', error);
-        });
+              const capaElemento = capasElementos[index]; 
+              if (capaElemento) {
+                  capaElemento.src = capa;
+              }
+          });
+      })
+      .catch(error => {
+          console.error('Erro ao buscar os livros:', error);
+      });
 }
 
 const isbns = ['9781250095282', '9788501071545', '9788937461187'];
